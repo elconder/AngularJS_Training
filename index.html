@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html ng-app="GlobersApp">
+
+<head>
+    <title>AngularJS Training</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class="container-fluid">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="images/globant-dark.svg">
+                </a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container" ng-controller="mainController as main">
+        <div class="row">
+            <div class="col-md-6">
+                <input class="form-control" ng-model="search" type="text" placeholder="Buscar Glober" />
+            </div>
+        </div>
+        <hr/>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Cargo</th>
+                    <th>Ciudad</th>
+                    <th>Skills</th>
+                    <th>Talent Pool</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="glober in main.globers | filter:{rol:search}">
+                    <td>{{glober.id}}</td>
+                    <td>{{glober.name}}</td>
+                    <td>{{glober.rol}}</td>
+                    <td>{{glober.city}}</td>
+                    <td>
+                        <ul>
+                            <li ng-repeat="skill in glober.skills">
+                                {{skill}}
+                            </li>
+                        </ul>
+                    </td>
+                    <td>
+                        <a ng-class="{'btn-default': !glober.talentPool, 'btn-primary': glober.talentPool}" id="glob-{{glober.id}}" ng-disabled="!glober.talentPool" class="btn btn-xs" href="#" ng-click="main.contact($event)">Contactar</a>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <script type="text/javascript" src="vendor/angular.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+</body>
+
+</html>

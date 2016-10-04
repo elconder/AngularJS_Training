@@ -1,0 +1,64 @@
+[
+    {
+        "id": 1010,
+        "name": "Andres",
+        "rol": "Java Developer",
+        "city": "Medellin",
+        "talentPool": false,
+        "skills": [
+            "Java",
+            "XML",
+            "REST"
+        ]
+    },
+    {
+        "id": 1020,
+        "name": "Carlos",
+        "rol": "Web UI Developer",
+        "city": "Bogota",
+        "talentPool": true,
+        "skills": [
+            "HTML",
+            "JavaScript",
+            "CSS",
+            "AngularJS"
+        ]
+    },
+    {
+        "id": 1030,
+        "name": "Julian",
+        "rol": "IOS Developer",
+        "city": "Buenos Aires",
+        "talentPool": false,
+        "skills": [
+            "Objetive C",
+            "Swift",
+            "JavaScript"
+        ]
+    },
+    {
+        "id": 1040,
+        "name": "Johana",
+        "rol": "Testing",
+        "city": "Medellin",
+        "talentPool": true,
+        "skills": [
+            "Jira",
+            "Jenkins",
+            "Agile Scrum"
+        ]
+    },
+    {
+        "id": 1050,
+        "name": "Kimberly",
+        "rol": "UX Designer",
+        "city": "La Plata",
+        "talentPool": false,
+        "skills": [
+            "Sketch",
+            "Responsive Design",
+            "Usability Testing",
+            "Wireframing"
+        ]
+    }
+]
